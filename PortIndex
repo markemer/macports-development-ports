@@ -1,0 +1,2 @@
+iTerm-exp 471
+portdir aqua/iTerm-exp description {Enhanced terminal emulator program, successor to iTerm} homepage https://iterm2.com/ epoch 0 platforms darwin name iTerm-exp long_description {iTerm2 is a replacement for Terminal and the successor to iTerm. Its focus is on performance, internationalization, and supporting innovative features that make your life better.} maintainers {{mark @markemer} openmaintainer} license GPL-2+ categories {aqua shells} version 3.4.19 revision 1
