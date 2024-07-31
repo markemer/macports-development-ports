@@ -1,5 +1,6 @@
 iterm-exp 0
-antlr3 485
-gcc13 966
-libgcc13 1666
-gcc13-libcxx 2295
+antlr4 485
+gtkwave-devel 967
+gcc13-test 1775
+libgcc13-test 2500
+gcc13-test-libcxx 3139

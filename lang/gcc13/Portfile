@@ -7,7 +7,7 @@ PortGroup           active_variants              1.1
 PortGroup           conflicts_build              1.0
 
 epoch               0
-name                gcc13
+name                gcc13-test
 
 homepage            https://gcc.gnu.org/
 
