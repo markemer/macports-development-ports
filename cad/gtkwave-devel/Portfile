@@ -1,0 +1,46 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:filetype=tcl:et:sw=4:ts=4:sts=4
+
+PortSystem                      1.0
+PortGroup           meson       1.0
+PortGroup           app         1.1
+PortGroup           github      1.0
+
+name                gtkwave-devel
+categories          cad
+description         A viewer for common electronic CAD waveform files.
+long_description \
+                    GTKWave is a fully featured GTK+ based wave viewer for Unix \
+                    and Win32 which reads LXT, LXT2, VZT, and GHW files as well \
+                    as standard Verilog VCD/EVCD files and allows their viewing.
+
+maintainers         {mark @markemer} openmaintainer
+supported_archs     x86_64 arm64
+
+github.setup        gtkwave gtkwave 6acdc96190f3f4f9c1e4edc28826812834911967
+version             20240730
+
+checksums           rmd160  7a27a77e5bf70619f71b5014139d98561256429f \
+                    sha256  d928cb934d40f67d1491bc1c56c8e49667d46c23fa5c9b125030004496723cf1 \
+                    size    4422763
+
+patchfiles          patch-gw-fst-file.c.diff
+
+depends_build-append \
+                    port:pkgconfig \
+                    port:ninja
+
+depends_lib-append \
+                    port:bzip2 \
+                    path:lib/pkgconfig/gtk+-3.0.pc:gtk3 \
+                    port:gtk-osx-application-gtk3 \
+                    path:lib/pkgconfig/harfbuzz.pc:harfbuzz \
+                    path:lib/pkgconfig/pango.pc:pango \
+                    port:desktop-file-utils \
+                    port:xz \
+                    port:zlib
+
+app.create          yes
+app.name            GTKWave
+app.executable      gtkwave
+app.icon            share/icons/io.github.gtkwave.GTKWave.Devel.svg
+app.retina          yes
