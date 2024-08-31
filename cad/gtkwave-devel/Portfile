@@ -16,14 +16,12 @@ long_description \
 maintainers         {mark @markemer} openmaintainer
 supported_archs     x86_64 arm64
 
-github.setup        gtkwave gtkwave 6acdc96190f3f4f9c1e4edc28826812834911967
-version             20240730
+github.setup        gtkwave gtkwave 6b18383823a0a7bbb68e9d99b4fc141d012ca103
+version             20240830
 
-checksums           rmd160  7a27a77e5bf70619f71b5014139d98561256429f \
-                    sha256  d928cb934d40f67d1491bc1c56c8e49667d46c23fa5c9b125030004496723cf1 \
-                    size    4422763
-
-patchfiles          patch-gw-fst-file.c.diff
+checksums           rmd160  dcce911c6640f4d3dfbe6570dbe4568162b110ea \
+                    sha256  2beae8d2855b380571fb6005efd453cc7b9e2d7b09f14a53f6d5b373f14a3325 \
+                    size    4423071
 
 depends_build-append \
                     port:pkgconfig \
